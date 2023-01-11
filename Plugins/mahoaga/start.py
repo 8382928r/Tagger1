@@ -11,17 +11,17 @@ async def start(event):
   if event.is_private:
     async for usr in Maho.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await Maho.send_message(-1001616646733, f"ℹ️ **Start Veren Kullanıcı -** {ad}")
+     await Maho.send_message(-1001616646733, f"ℹ️ **Start Veren Kullanıcı :** {ad}")
      return await event.reply(f"**Merhaba\nBenim Görevim Üyeleri Etiketlemektir.\nKomutlar için Komutlar butonuna basınız.**", buttons=(
                       [
                        Button.inline("Komutlar", data="komutlar")
                       ],
                       [
-                       Button.url('↘️ Gruba Ekle', 'http://t.me/Sensizolmaz_bot?startgroup=a'),
-                       Button.url('📣 Kanal', 'https://t.me/TaliaSupport')
+                       Button.url('↘️ Gruba Ekle', 'http://t.me/CasperTagger_Bot?startgroup=a'),
+                       Button.url('📣 Kanal', 'https://t.me/CasperTaggerLog')
                       ],
                       [
-                       Button.url('🇹🇷 Sahibim', 'https://t.me/Mahoaga')
+                       Button.url('👻 Sahibim', 'https://t.me/Suphi_Casper')
                       ],
                     ),
                     link_preview=False)
@@ -35,16 +35,16 @@ async def start(event):
 async def handler(event):
     async for usr in Maho.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"**Merhaba Benim adım Tagger\nGörevim Üyeleri Etiketlemek\nKomutlar için Komutlar Düğmesine Basın.**", buttons=(
+     await event.edit(f"**Merhaba Benim adım CasperTagger\nGörevim Üyeleri Etiketlemek\nKomutlar için Komutlar Düğmesine Basın.**", buttons=(
                       [
                        Button.inline("Komutlar", data="komutlar")
                       ],
                       [
-                       Button.url('↘️ Gruba Ekle', 'http://t.me/Sensizolmaz_bot?startgroup=a'),
-                       Button.url('📣 Kanal', 'https://t.me/TaliaSupport')
+                       Button.url('↘️ Gruba Ekle', 'http://t.me/CasperTagger_Bot?startgroup=a'),
+                       Button.url('📣 Kanal', 'https://t.me/@CasperTaggerLog')
                       ],
                       [
-                       Button.url('🇹🇷 Sahibim', 'https://t.me/Mahoaga')
+                       Button.url('👻 Sahibim', 'https://t.me/Suphi_Casper')
                       ],
                     ),
                     link_preview=False)
@@ -52,7 +52,7 @@ async def handler(event):
 # Maho aga
 @Maho.on(events.callbackquery.CallbackQuery(data="komutlar"))
 async def handler(event):
-    await event.edit(f"**Komutlarım:\n\n/tag Toplu etiket atar..\n/yt Sadece yöneticileri etiketlemek içindir.\n/ttag Tek tek etiketleme yapar.\n/btag Bayraklar ile etiketlemek içindir.\n/stag Sözler ile etiketler.\n/itag İsimler ile etiketlemek içindir.\n/futbol Futbolcu isimleri ile etiketleme.\n/etag Emojiler ile etiketleme işlemidir.\n/cancel - Sonlandırır... \n\n❗ Yalnızca yöneticiler bu komutları kullanabilir.**", buttons=(
+    await event.edit(f"**⌯            Komutlar            ⌯**\n\n**🕹 Komut :** `/tag`\n\n**📄 Açıklama :** `Toplu etiket atar.`\n\n**🕹 Komut :** `/ttag`\n\n**📄 Açıklama :** `Tek tek etiketleme işlemi yapar.`\n\n**🕹 Komut :** `/btag`\n\n**📄 Açıklama :** `Bayraklar ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/stag`\n\n**📄 Açıklama :** `Söz ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/itag`\n\n**📄 Açıklama :** `İsimler ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/futbol`\n\n**📄 Açıklama :** `Futbolcu isimleri ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/etag`\n\n**📄 Açıklama :** `Emojiler ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/cancel`\n\n**📄 Açıklama :** `Etiketleme işlemini sonlandırır...`\n\n**❗ Yalnızca yöneticiler bu komutları kullanabilir.**", buttons=(
                       [
                       Button.inline("◀️ Geri", data="start")
                       ]
