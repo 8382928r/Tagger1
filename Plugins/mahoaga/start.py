@@ -41,7 +41,7 @@ async def handler(event):
                       ],
                       [
                        Button.url('↘️ Gruba Ekle', 'http://t.me/CasperTagger_Bot?startgroup=a'),
-                       Button.url('📣 Kanal', 'https://t.me/@CasperTaggerLog')
+                       Button.url('📣 Kanal', 'https://t.me/CasperTaggerLog')
                       ],
                       [
                        Button.url('👻 Sahibim', 'https://t.me/Suphi_Casper')
@@ -52,7 +52,7 @@ async def handler(event):
 # Maho aga
 @Maho.on(events.callbackquery.CallbackQuery(data="komutlar"))
 async def handler(event):
-    await event.edit(f"**⌯            Komutlar            ⌯**\n\n**🕹 Komut :** `/tag`\n\n**📄 Açıklama :** `Toplu etiket atar.`\n\n**🕹 Komut :** `/ttag`\n\n**📄 Açıklama :** `Tek tek etiketleme işlemi yapar.`\n\n**🕹 Komut :** `/btag`\n\n**📄 Açıklama :** `Bayraklar ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/stag`\n\n**📄 Açıklama :** `Söz ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/itag`\n\n**📄 Açıklama :** `İsimler ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/futbol`\n\n**📄 Açıklama :** `Futbolcu isimleri ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/etag`\n\n**📄 Açıklama :** `Emojiler ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/cancel`\n\n**📄 Açıklama :** `Etiketleme işlemini sonlandırır...`\n\n**❗ Yalnızca yöneticiler bu komutları kullanabilir.**", buttons=(
+    await event.edit(f"**⌯            Komutlar            ⌯**\n\n**🕹 Komut :** `/tag`\n**📄 Açıklama :** `Toplu etiket atar.`\n\n**🕹 Komut :** `/ttag`\n**📄 Açıklama :** `Tek tek etiketleme işlemi yapar.`\n\n**🕹 Komut :** `/btag`\n**📄 Açıklama :** `Bayraklar ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/stag`\n**📄 Açıklama :** `Söz ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/itag`\n**📄 Açıklama :** `İsimler ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/futbol`\n**📄 Açıklama :** `Futbolcu isimleri ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/etag`\n**📄 Açıklama :** `Emojiler ile etiketleme işlemini yapar.`\n\n**🕹 Komut :** `/cancel`\n**📄 Açıklama :** `Etiketleme işlemini sonlandırır...`\n\n**❗ Yalnızca yöneticiler bu komutları kullanabilir.**", buttons=(
                       [
                       Button.inline("◀️ Geri", data="start")
                       ]
