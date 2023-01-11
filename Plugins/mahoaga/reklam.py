@@ -40,7 +40,7 @@ async def gcast(event):
   await event.respond(f"Toplam {len(grup_sayi)} Grublara reklam gönderiliyor...")
   for x in grup_sayi:
     try:
-      await Maho.send_message(x,f"**📣 @Mahoaga **\n\n{reply.message}")
+      await Maho.send_message(x,f"**📣 @BioCasper **\n\n{reply.message}")
     except:
       pass
   await event.respond(f"Reklam gönderildi.")
