@@ -18,7 +18,7 @@ async def start(event):
                       ],
                       [
                        Button.url('↘️ Gruba Ekle', 'http://t.me/CasperTagger_Bot?startgroup=a'),
-                       Button.url('📣 Kanal', 'https://t.me/CasperTaggerLog')
+                       Button.url('📣 Kanal', 'https://t.me/BioCasper')
                       ],
                       [
                        Button.url('👻 Sahibim', 'https://t.me/Suphi_Casper')
@@ -41,7 +41,7 @@ async def handler(event):
                       ],
                       [
                        Button.url('↘️ Gruba Ekle', 'http://t.me/CasperTagger_Bot?startgroup=a'),
-                       Button.url('📣 Kanal', 'https://t.me/CasperTaggerLog')
+                       Button.url('📣 Kanal', 'https://t.me/BioCasper')
                       ],
                       [
                        Button.url('👻 Sahibim', 'https://t.me/Suphi_Casper')
