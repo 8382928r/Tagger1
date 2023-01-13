@@ -64,7 +64,7 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
-        await Maho.send_message(event.chat_id, f"📢 ~ **{msg}**\n{usrtxt}")
+        await Maho.send_message(event.chat_id, f"**📢\n⌯ {msg}**\n⌯ {usrtxt}")
         await asyncio.sleep(2.9)
         usrnum = 0
         usrtxt = ""
