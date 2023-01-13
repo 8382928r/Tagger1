@@ -12,17 +12,6 @@ anlik_calisan = []
 rxyzdev_tagTot = {}
 rxyzdev_initT = {}
 
-@Maho.on(events.NewMessage(pattern="^/cancel$"))
-async def cancel_spam(event):
-  if not event.chat_id in anlik_calisan:
-    return
-  else:
-    try:
-      anlik_calisan.remove(event.chat_id)
-    except:
-      pass
-    return await event.respond('✅ Etiket işlemi başarıyla durduruldu.')
-
 @Maho.on(events.NewMessage(pattern="^/yt ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan 
