@@ -12,6 +12,17 @@ anlik_calisan = []
 rxyzdev_tagTot = {}
 rxyzdev_initT = {}
 
+@Maho.on(events.NewMessage(pattern="^/cancel$"))
+async def cancel_spam(event):
+  if not event.chat_id in anlik_calisan:
+    return
+  else:
+    try:
+      anlik_calisan.remove(event.chat_id)
+    except:
+      pass
+    return await event.respond('✅ Etiket işlemi başarıyla durduruldu.')
+
 @Maho.on(events.NewMessage(pattern="^/yt ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan 
@@ -51,7 +62,7 @@ async def mentionalladmin(event):
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
-        await Maho.send_message(event.chat_id, f"📢 ~ **{msg}**\n\n{usrtxt}")
+        await Maho.send_message(event.chat_id, f"**📢\n⌯ {msg}**\n\n⌯ {usrtxt}")
         await asyncio.sleep(3)
         usrnum = 0
         usrtxt = ""
