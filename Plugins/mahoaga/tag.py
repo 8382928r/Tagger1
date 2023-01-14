@@ -59,7 +59,7 @@ async def mentionall(event):
     async for usr in Maho.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"⌯ [{usr.first_name}](tg://user?id={usr.id})"
+      usrtxt += f"⌯ [{usr.first_name}](tg://user?id={usr.id})\n"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -83,7 +83,7 @@ async def mentionall(event):
     async for usr in Maho.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"⌯ [{usr.first_name}](tg://user?id={usr.id})"
+      usrtxt += f"⌯ [{usr.first_name}](tg://user?id={usr.id})\n"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
