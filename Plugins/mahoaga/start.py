@@ -11,7 +11,7 @@ async def start(event):
     async for usr in Maho.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await Maho.send_message(-1001825159916, f"ℹ️ **Start Veren Kullanıcı :** {ad}")
-     return await event.reply(f"**Merhaba\nBenim Görevim Üyeleri Etiketlemektir.\nKomutlar için Komutlar butonuna basınız.**", buttons=(
+     return await event.reply(f"**⌯ Merhaba\n⌯ Benim Görevim Üyeleri Etiketlemektir.\n⌯ Komutlar için Komutlar butonuna basınız.**", buttons=(
                       [
                        Button.inline("🗄 Komutlar", data="komutlar")
                       ],
@@ -27,7 +27,7 @@ async def start(event):
 
 
   if event.is_group:
-    return await Maho.send_message(event.chat_id, f"**Merhaba\nBenim Görevim Üyeleri Etiketlemektir.\nKomutlar için Komutlar butonuna basınız.**", buttons=(
+    return await Maho.send_message(event.chat_id, f"**⌯ Merhaba\n⌯ Benim Görevim Üyeleri Etiketlemektir.\n⌯ Komutlar için Komutlar butonuna basınız.**", buttons=(
                       [
                        Button.inline("🗄 Komutlar", data="komutlar")
                       ],
@@ -46,7 +46,7 @@ async def start(event):
 async def handler(event):
     async for usr in Maho.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"**Merhaba Benim adım CasperTagger\nGörevim Üyeleri Etiketlemek\nKomutlar için Komutlar Düğmesine Basın.**", buttons=(
+     await event.edit(f"**⌯ Merhaba\n⌯ Benim adım CasperTagger\n⌯ Görevim Üyeleri Etiketlemek\n⌯ Komutlar için Komutlar Düğmesine Basın.**", buttons=(
                       [
                        Button.inline("🗄 Komutlar", data="komutlar")
                       ],
