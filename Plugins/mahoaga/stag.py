@@ -22,7 +22,7 @@ async def cancel_spam(event):
       anlik_calisan.remove(event.chat_id)
     except:
       pass
-    return await event.respond('✅ Etiket işlemi başarıyla durduruldu.')
+    return await event.respond('**✅ Etiket işlemi başarıyla durduruldu.**')
 
 
 @Maho.on(events.NewMessage(pattern="^/stag ?(.*)"))
@@ -30,7 +30,7 @@ async def mentionall(event):
   global anlik_calisan 
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("Bu komutu sadece grup veya kanallarda kullanabilirsiniz.")
+    return await event.respond("**Bu komutu sadece grup veya kanallarda kullanabilirsiniz.**")
   
   admins = []
   async for admin in Maho.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -45,9 +45,9 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)__")
+        return await event.respond("**Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Bana bir metin verin.")
+    return await event.respond("**Bana bir metin verin.**")
   else:
     return await event.respond("**Etiket başlatmak için sebep yazın. 💬\n\n(Örnek: /stag Herkese Merhaba!)**")
   
@@ -63,8 +63,8 @@ async def mentionall(event):
       usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id})\n"
       if event.chat_id not in anlik_calisan:
         return
-      if usrnum == 4:
-        await Maho.send_message(event.chat_id, f"**📢\n⌯ {msg}**\n⌯ {usrtxt}")
+      if usrnum == 2:
+        await Maho.send_message(event.chat_id, f"**⌯📢 {msg}**\n⌯ {usrtxt}")
         await asyncio.sleep(2.5)
         usrnum = 0
         usrtxt = ""
@@ -84,10 +84,10 @@ async def mentionall(event):
     async for usr in Maho.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id})/n"
+      usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id})\n"
       if event.chat_id not in anlik_calisan:
         return
-      if usrnum == 4:
+      if usrnum == 2:
         await Maho.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2.5)
         usrnum = 0
@@ -159,7 +159,7 @@ async def mentionall(event):
   global anlik_calisan 
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("Bu komutu sadece grup veya kanallarda kullanabilirsiniz.")
+    return await event.respond("**Bu komutu sadece grup veya kanallarda kullanabilirsiniz.**")
   
   admins = []
   async for admin in Maho.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -174,11 +174,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)__")
+        return await event.respond("**Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("Bana bir metin verin.")
   else:
-    return await event.respond("**Etiket başlatmak için sebep yazın... ✋\n\n(Örnek: /itag Herkese Merhaba!)**")
+    return await event.respond("**Etiket başlatmak için sebep yazın... ✋\n\n(Örnek:** `/itag Herkese Merhaba!`**)**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -193,7 +193,7 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
-        await Maho.send_message(event.chat_id, f"**📢\n⌯ {msg}**\n\n⌯ {usrtxt}")
+        await Maho.send_message(event.chat_id, f"**⌯📢 {msg}**\n\n⌯ {usrtxt}")
         await asyncio.sleep(3)
         usrnum = 0
         usrtxt = ""
@@ -213,7 +213,7 @@ async def mentionall(event):
     async for usr in Maho.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(gisim)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(gisim)}](tg://user?id={usr.id})\n"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
