@@ -49,7 +49,7 @@ async def mentionalladmin(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("**Bana bir metin verin.**")
   else:
-    return await event.respond("**Etikete Başlamak için sebep yazın... ✋\n\n(Örnek: **`/yt Herkese Merhaba!`**)**")
+    return await event.respond("**Etikete Başlamak için sebep yazın... ✋\n\n(Örnek:** `/yt Herkese Merhaba!`**)**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -60,11 +60,11 @@ async def mentionalladmin(event):
     async for usr in Maho.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id})"
+      usrtxt += f"⌯ [{usr.first_name}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
-        await Maho.send_message(event.chat_id, f"**⌯📢 {msg}**\n\n⌯ {usrtxt}")
+        await Maho.send_message(event.chat_id, f"**⌯ 📢 {msg}**\n\n{usrtxt}")
         await asyncio.sleep(3)
         usrnum = 0
         usrtxt = ""
@@ -84,7 +84,7 @@ async def mentionalladmin(event):
     async for usr in Maho.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id})"
+      usrtxt += f"⌯ [{usr.first_name}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
