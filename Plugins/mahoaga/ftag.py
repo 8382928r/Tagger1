@@ -60,11 +60,11 @@ async def mentionall(event):
     async for usr in Maho.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(futbol)}](tg://user?id={usr.id})"
+      usrtxt += f"⌯ [{random.choice(futbol)}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
-        await Maho.send_message(event.chat_id, f"**⌯📢 {msg}**\n⌯ {usrtxt}")
+        await Maho.send_message(event.chat_id, f"**⌯ 📢 {msg}**\n{usrtxt}")
         await asyncio.sleep(2.9)
         usrnum = 0
         usrtxt = ""
@@ -84,7 +84,7 @@ async def mentionall(event):
     async for usr in Maho.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(futbol)}](tg://user?id={usr.id}) "
+      usrtxt += f"⌯ [{random.choice(futbol)}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
