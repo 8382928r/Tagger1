@@ -12,7 +12,7 @@ anlik_calisan = []
 rxyzdev_tagTot = {}
 rxyzdev_initT = {}
 
-@Maho.on(events.NewMessage(pattern="^/yt ?(.*)"))
+@Maho.on(events.NewMessage(pattern="^/yt|^/atag ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan 
   rxyzdev_tagTot[event.chat_id] = 0
