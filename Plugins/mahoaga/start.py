@@ -32,6 +32,7 @@ async def start(event):
                        Button.inline("🗄 Komutlar", data="komutlar")
                       ],
                       [
+                       Button.url('↘️ Gruba Ekle', 'http://t.me/CasperTagger_Bot?startgroup=a'),
                        Button.url('📣 Kanal', 'https://t.me/BioCasper')
                       ],
                       [
